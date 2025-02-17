@@ -1,0 +1,133 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+header {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+header h1, header p {
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* Floating Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.floating-text {
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* Team Section */
+.team {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.team-member {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Matches Section */
+.matches {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.match {
+    background: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Participation Form */
+.participation-form {
+    background-color: #e7e7e7;
+    padding: 50px 0;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="email"], input[type="phone"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
