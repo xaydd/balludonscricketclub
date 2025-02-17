@@ -1,133 +1,162 @@
-/* Basic Reset */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
 }
 
 /* Header Section */
 header {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 0;
     position: relative;
-    background-size: cover;
-    background-position: center;
+    background: url('https://www.cricket.com.au/-/media/News/2020/11/16/210728_image_cricket_field.ashx') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-header h1, header p {
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 3em;
     animation: fadeInUp 2s ease-in-out;
 }
 
-/* Floating Animation */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+header p {
+    font-size: 1.2em;
+    margin-top: 20px;
+    animation: fadeInUp 3s ease-in-out;
 }
 
 .floating-text {
-    animation: fadeInUp 2s ease-in-out;
+    animation: floatUp 5s ease-in-out infinite;
 }
 
-/* Team Section */
-.team {
-    background-color: #f4f4f4;
-    padding: 50px 0;
+/* Animation for Text Floating */
+@keyframes floatUp {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* About Section */
+#about {
+    padding: 80px 0;
+    background: #222;
     text-align: center;
 }
 
-.team-member {
-    display: inline-block;
-    margin: 20px;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
 }
 
-h3 {
-    font-size: 24px;
+.players {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.player {
+    background: #333;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.player h3 {
+    font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-p {
-    font-size: 16px;
-    color: #555;
+.player p {
+    font-size: 1.1em;
 }
 
-/* Matches Section */
-.matches {
-    background-color: #f4f4f4;
-    padding: 50px 0;
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background: #444;
     text-align: center;
 }
 
-.match {
-    background: #ffffff;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Participation Form */
-.participation-form {
-    background-color: #e7e7e7;
-    padding: 50px 0;
-    text-align: center;
-}
-
-form {
-    max-width: 600px;
+#contact form {
+    max-width: 500px;
     margin: 0 auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background: #222;
+    padding: 30px;
+    border-radius: 8px;
 }
 
-input[type="text"], input[type="email"], input[type="phone"] {
+#contact form input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid #ddd;
+    border-radius: 4px;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
+#contact form button {
+    width: 100%;
+    padding: 10px;
+    background: #008CBA;
     border: none;
-    border-radius: 5px;
+    color: white;
+    font-size: 1.1em;
     cursor: pointer;
+    border-radius: 4px;
 }
 
-button:hover {
-    background-color: #45a049;
+#contact form button:hover {
+    background: #005f73;
 }
 
 /* Footer Section */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px;
+    background: #222;
 }
 
 footer a {
-    color: #4CAF50;
+    color: #008CBA;
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
